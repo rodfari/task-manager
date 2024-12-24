@@ -1,0 +1,65 @@
+*,
+*::before,
+*::after 
+  box-sizing: border-box
+
+body
+    background-color: #292828
+    color: #569eeb
+    font-family: 'Roboto', sans-serif
+
+.container
+    margin: 0 auto
+    max-width: 960px
+    padding: 1em
+
+input[type="text"],
+input[type="password"],
+input[type="email"]
+    padding: 0.5em
+    border: 1px solid #569eeb
+    border-radius: 0.25em
+    background-color: #292828
+    color: #569eeb
+    font-size: 1em
+    line-height: 1.5
+    margin: 0.5em 0
+    width: 100%
+
+button
+    padding: 0.5em
+    border: 1px solid #f41857
+    border-radius: 0.25em
+    background-color: #f41857
+    color: white
+    font-size: 1em
+    line-height: 1.5
+    margin: 0.5em 0
+    cursor: pointer
+
+
+
+
+
+input[type="checkbox"]
+    appearance: none
+    width: 1.5em
+    height: 1.5em
+    border: 1px solid #569eeb
+    border-radius: 50%
+    background-color: #292828
+    cursor: pointer
+    position: relative
+
+    &:checked::before
+        content: ''
+        display: block
+        width: 0.75em
+        height: 0.75em
+        background-color: #569eeb
+        border-radius: 50%
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+
