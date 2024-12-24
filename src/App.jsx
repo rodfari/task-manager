@@ -1,6 +1,8 @@
 import { useState } from "react";
 import "./App.sass";
 import Task from "./components/Task";
+import Input from "./components/Layout/Input";
+import Button from "./components/Layout/Button";
 
 function App() {
   console.log("[App component] - rendered");
@@ -26,9 +28,9 @@ function App() {
       <div className="tasks">
         {tasks.map((task, index) => (
           <div key={index} className="task">
-            <input type="checkbox" name={task} className="select-task" />
+            <Input type="checkbox" name={task} className="select-task" />
             <p>{task}</p>
-            <button onClick={ () => deleteTask(index) }>delete</button>
+            <Button click={ () => deleteTask(index) }>delete</Button>
           </div>
         ))}
       </div>
